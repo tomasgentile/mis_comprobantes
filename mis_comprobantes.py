@@ -1,8 +1,7 @@
 """
-Bot que descarga archivos (y los concatena) del servicio de Mis comprobantes de la web de AFIP
+Descarga archivos (y los concatena) del servicio de Mis comprobantes de la web de AFIP
 """
 import os
-import sys
 from pathlib import Path
 import shutil
 import time
@@ -190,15 +189,7 @@ class App:
                 self.message.config(fg='red')
                 chrome_browser.quit()
                 return
-
-            # Saltear alertas
-            time.sleep(1)
-            alert_is_present = chrome_browser.find_element(By.CLASS_NAME, 'modal-dialog').is_displayed()
-
-            if alert_is_present:
-                close_alert = chrome_browser.find_element(By.CLASS_NAME, 'btn-primary-outline')
-                close_alert.click()
-
+            
             try:
                 self.messsage_text = 'Iniciando descarga'
                 self.message.config(fg='green')
