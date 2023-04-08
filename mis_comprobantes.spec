@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['C:\\Users\\Tomas\\Programacion\\Python\\mis_comprobantes\\code\\mis_comprobantes.py'],
+    ['mis_comprobantes.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -41,5 +41,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['C:\\Users\\Tomas\\Programacion\\Python\\mis_comprobantes\\code\\robot.ico'],
+    icon=['robot.ico'],
 )
